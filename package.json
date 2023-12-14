@@ -66,13 +66,5 @@
   "devDependencies": {
     "@types/uuid": "^9.0.2",
     "prisma": "^5.1.1"
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false,
-    "util": false,
-    "net": false,
-    "tls": false
   }
 }
