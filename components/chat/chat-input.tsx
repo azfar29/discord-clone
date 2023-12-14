@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useModal } from "@/hooks/use-modal-store";
 import { EmojiPicker } from "@/components/emoji-picker";
+import { SendButton } from "../send-button";
 
 interface ChatInputProps {
   apiUrl: string;
@@ -86,7 +87,8 @@ export const ChatInput = ({
                     placeholder={`Message ${type === "conversation" ? name : "#" + name}`}
                     {...field}
                   />
-                  <div className="absolute top-7 right-8">
+                  <div className="absolute top-5 right-8">
+                    <SendButton onClick={form.handleSubmit(onSubmit)} />
                     <EmojiPicker
                       onChange={(emoji: string) => field.onChange(`${field.value} ${emoji}`)}
                     />
